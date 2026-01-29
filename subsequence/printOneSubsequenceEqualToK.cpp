@@ -18,9 +18,7 @@ bool fun(vector<int> arr, int i, int k, vector<int> subsequence) {
         
         return false;
     }
-    // Exclude current element
     if (fun(arr, i + 1, k, subsequence)) return true;
-    // Include current element
     subsequence.push_back(arr[i]);
     if (fun(arr, i + 1, k, subsequence)) return true;
     return false;
@@ -32,4 +30,5 @@ int main() {
     fun(arr, 0, k, {});
 
     return 0;
+
 }
