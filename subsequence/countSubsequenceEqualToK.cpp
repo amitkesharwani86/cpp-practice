@@ -14,9 +14,7 @@ void fun(vector<int> arr, int i, int k, vector<int> subsequence, int &total) {
         
         return;
     }
-    // Exclude current element
     fun(arr, i + 1, k, subsequence, total);
-    // Include current element
     subsequence.push_back(arr[i]);
     fun(arr, i + 1, k, subsequence, total);
 }
@@ -28,4 +26,5 @@ int main() {
     fun(arr, 0, k, {}, total);
     cout << "Toral no. of (Subsequence == k) :- " << total;
     return 0;
+
 }
