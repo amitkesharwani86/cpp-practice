@@ -17,9 +17,7 @@ void fun(vector<int> arr, int i, int k, vector<int> subsequence) {
         
         return;
     }
-    // Exclude current element
     fun(arr, i + 1, k, subsequence);
-    // Include current element
     subsequence.push_back(arr[i]);
     fun(arr, i + 1, k, subsequence);
 }
@@ -30,4 +28,5 @@ int main() {
     fun(arr, 0, k, {});
 
     return 0;
+
 }
