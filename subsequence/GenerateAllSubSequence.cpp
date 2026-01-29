@@ -6,9 +6,7 @@ void fun(vector<int> arr, int i, vector<vector<int>> &result, vector<int> subseq
         result.push_back(subsequence);
         return;
     }
-    // Exclude current element
     fun(arr, i + 1, result, subsequence);
-    // Include current element
     subsequence.push_back(arr[i]);
     fun(arr, i + 1, result, subsequence);
 }
@@ -26,4 +24,5 @@ int main() {
    }
 
     return 0;
+
 }
