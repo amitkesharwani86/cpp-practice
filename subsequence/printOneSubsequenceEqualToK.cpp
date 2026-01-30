@@ -27,8 +27,13 @@ bool fun(vector<int> arr, int i, int k, vector<int> subsequence) {
 int main() {
     int k = 12;
     vector<int> arr = {2, 3, 1, 4, 5, 7};
-    fun(arr, 0, k, {});
+    if(fun(arr, 0, k, {})) {
+        cout << "Found";
+    } else {
+        cout << "Not Found";
+    }
 
     return 0;
 
 }
+
